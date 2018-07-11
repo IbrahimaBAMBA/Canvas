@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/js/bootstrap.js">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>P2-Exercice3</title>
+  </head>
+  <body>
+    <canvas id="mon_canvas" width="400px" height="400px" style='border:1px solid #002633 ;  '>
+
+      Texte alternatif pour les navigateurs ne supportant pas Canvas.
+    </canvas>
+
+
+  <script>
+  var canvas = document.getElementById("mon_canvas");
+  var ctx = canvas.getContext("2d");
+
+  ctx.beginPath();
+  ctx.arc(200, 75, 50, 0, Math.PI * 2, true);//tête
+  ctx.fillStyle = '#cc8800';
+  ctx.fill();
+  //ctx.stroke();
+  //ctx.closePath();
+
+  ctx.beginPath();
+  ctx.arc(180, 65, 10, 0, Math.PI * 2, true);//oeil gauche
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  //ctx.stroke();
+  //ctx.closePath();
+
+  ctx.beginPath();
+  ctx.arc(220, 65, 10, 0, Math.PI * 2, true);//oeil droit
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  //ctx.stroke();
+  //ctx.closePath();
+
+  ctx.beginPath();
+  ctx.arc(180, 50, 5, 0, Math.PI * 1, true);//cil
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  //ctx.stroke();
+  //ctx.closePath();
+
+  ctx.beginPath();
+  ctx.arc(220, 50, 5, 0, Math.PI * 1, true);//cil
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  //ctx.stroke();
+  //ctx.closePath();
+
+  ctx.beginPath();
+  ctx.strokeStyle="red";
+  ctx.moveTo(180,85);
+  ctx.quadraticCurveTo(195,95,220,85);//bouche
+  ctx.closePath();
+  ctx.stroke();
+
+
+  ctx.beginPath();
+  ctx.fillStyle = '#cc8800';
+  ctx.lineWidth = 35;
+  ctx.lineCap="round";                 //bras
+  ctx.moveTo(70,125);
+  ctx.lineTo(320,125);
+  ctx.fill();
+  ctx.stroke();
+
+
+  ctx.beginPath();
+  ctx.fillRect(140,140,115,170); // le corps
+  ctx.fillStyle = '#cc8800';
+  ctx.fill();
+
+
+  ctx.beginPath();
+  ctx.fillStyle = '#8533ff';
+  ctx.arc(195, 167, 0, 0, Math.PI * 2, true);//boutons
+  ctx.fill();
+  ctx.stroke();
+
+
+
+
+
+  ctx.beginPath();
+  ctx.fillStyle = '#8533ff';
+  ctx.arc(195, 210, 0, 0, Math.PI * 2, true);//boutons
+  ctx.fill();
+  ctx.stroke();
+
+
+  ctx.beginPath();
+  ctx.lineWidth = 38;
+  ctx.lineCap="round";                 //pied droit
+  ctx.moveTo(157,310);
+  ctx.lineTo(157,350);
+  ctx.fillStyle = '#cc8800';
+  ctx.fill();
+  ctx.stroke();
+
+
+  //ctx.beginPath();
+  ctx.lineWidth = 38;
+  ctx.lineCap="round";                 //pied gauche
+  ctx.moveTo(237,310);
+  ctx.lineTo(237,350);
+  //ctx.fillStyle = '#cc8800';
+  //ctx.fill();
+  ctx.stroke();
+
+
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/js/bootstrap.js">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>P2-Exercice2</title>
+  </head>
+  <body>
+    <canvas id="mon_canvas" width="400px" height="400px" style='border:1px solid #002633 ; background-color:blue; '>
+
+      Texte alternatif pour les navigateurs ne supportant pas Canvas.
+    </canvas>
+
+
+  <script>
+  var canvas = document.getElementById("mon_canvas");
+  var ctx = canvas.getContext("2d");
+
+  ctx.beginPath();
+  ctx.fillStyle = '#ffffff';
+  ctx.strokeStyle="white";
+  ctx.moveTo(150,155);
+  ctx.quadraticCurveTo(190,40,250,155);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.strokeStyle="white";
+  ctx.moveTo(50,200);
+  ctx.bezierCurveTo(50,165,250,105,350,200);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.strokeStyle="white";
+  ctx.moveTo(50,200);
+  ctx.bezierCurveTo(50,250,300,275,350,200);
+  ctx.fill();
+
+
+  </script>
+
+  </body>
+</html>
